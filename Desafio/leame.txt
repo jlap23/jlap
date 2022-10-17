@@ -1,0 +1,3 @@
+basicamente es un programa para subir productos a partir de lo que pone el usuario y al final lo monta en bootstrap. algo funcional y que juegue a la segura. 
+
+me interesó mucho lo de bootstrap creo que hay mucho que investigar, muchas gracias por su apoyo, ahi vamos poco a poco. 

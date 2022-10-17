@@ -85,7 +85,7 @@ return a. cantidad - b.cantidad;
 });
 
 console.log('Ordenados por cantidad Ascendente: ');
-console.log(ordenadescantidad);
+console.log(ordenadosCantidad);
 document.write("<h3> Lista de Productos ordenados por cantidad: </h3>");
 
 for (var producto of ordenadosCantidad){

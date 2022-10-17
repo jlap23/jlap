@@ -22,13 +22,15 @@ class Producto {
 }
 
 var arrayProductos = [];
+let comprobacion;
+
 do{
-    var comprobacion = prompt("Ingresa nombre de producto o fin para finalizar");
+    comprobacion = prompt("Ingresa nombre de producto o fin para finalizar");
     if (comprobacion === "fin" || comprobacion === "FIN" || comprobacion === "Fin"){
         break;
     }else{
         nombreP= comprobacion;
-        var precioP = prompt("Ingresa precio");
+        var precioP = parseFloat(prompt("Ingresa precio"));
         var detalleP = prompt("Ingresa detalle");
         var cantidadP = prompt("Ingresa cantidad");
         arrayProductos.push(new Producto(nombreP,precioP,detalleP,cantidadP));

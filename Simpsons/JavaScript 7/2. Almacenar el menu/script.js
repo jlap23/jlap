@@ -1,15 +1,17 @@
-let comidas = localStorage.getItem('comidas');
+//parte de srcipt
+
+let comidas = localStorage.getItem("comidas");
 if (comidas == null) {
     const menu = [];
     for (let index = 0; index < 5; index++) {
-        menu.push(prompt('INGRESAR COMIDA'))
+        menu.push(prompt("INGRESAR COMIDA"))
     }
-    localStorage.setItem('comidas', menu);
+    localStorage.setItem("comidas", menu);
 } else {
-    let menu = '';
-    const arrayComidas = comidas.split(',');
+    let menu = "";
+    const arrayComidas = comidas.split(",");
     for (const nombreComida of arrayComidas) {
-        menu += nombreComida + '\n';
+        menu += nombreComida + "\n";
     }
     alert(menu);
 }

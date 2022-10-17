@@ -50,40 +50,54 @@ if (sumaNumeros >=18){
  
             //tabla
 
-let articuloTabla = document.getElementById("inferior");
-//creamos tabla y tbody
-let tabla = document.createElement("table");
-tabla.className="table table-striped";
-let tablaBody = document.createElement("tbody");
+    let articuloTabla = document.getElementById("inferior");
+    //creamos tabla y tbody
+    let tabla = document.createElement("table");
+    tabla.className="table table-striped";
+    let tablaBody = document.createElement("tbody");
 
-//recorro array de productos
-for(const producto of Productos){
-    tablaBody.innerHTML += `
-    <tr>
-        <td>${producto.id}</td>
-        <td>${producto.nombre}</td>
-        <td>${producto.precio}</td>
-        <td>${producto.descuento}</td>
-    </tr>
-    `;
-}
+    //recorro array de productos
+    for(const producto of Productos){
+        tablaBody.innerHTML += `
+        <tr>
+            <td>${producto.id}</td>
+            <td>${producto.nombre}</td>
+            <td>${producto.precio}</td>
+            <td>${producto.descuento}</td>
+        </tr>
+        `;
+
+        
+    }
+
+    // BUSCAR UN PRODUCTO ESPECIFICO POR NOMBRE INGRESADO
+
+    var ingresado = prompt("Ingresar el producto que quiero buscar");
+
+    var prodIngresado = Productos.filter(producto => producto.nombre.includes(ingresado));
+    console.log(prodIngresado);
+    document.write("<h3> Lista de Productos ingresados para busqueda: </h3>");
+
+        for (var producto of prodIngresado) {
+        document.write("<ul><li><h3>Nombre: " + producto.nombre + "</h3></li>");
+        document.write("<li><h3>Detalle: " + producto.detalle + "</h3></li>");
+        document.write("<li><h3>Precio: " + producto.precio + "</h3></li></ul><br>");
 
 
+    let articuloCartas = document.getElementById("cartas");
+    for(const producto of Productos){
+        let carta = document.createElement("div");
+        carta.className="card col-md-3"
+        carta.innerHTML =`
+            <div class="card body">
+                <h5 class="card-title">${producto.nombre}</h5>
+                <p class="card-text">Precio: ${producto.precio}</p>
+                <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+        `;
+        articuloCartas.append(carta);
 
-let articuloCartas = document.getElementById("cartas");
-for(const producto of Productos){
-    let carta = document.createElement("div");
-    carta.className="card col-md-3"
-    carta.innerHTML =`
-        <div class="card body">
-            <h5 class="card-title">${producto.nombre}</h5>
-            <p class="card-text">Precio: ${producto.precio}</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-    `;
-    articuloCartas.append(carta);
-
-}
+    }
       var descuento = prompt("¿Quieres descuento?")
         if (descuento === "si" || comprobacion === "SI" || comprobacion=== "Si"){
             const descuento = function (precio) { return precio * 0.10};
@@ -91,10 +105,14 @@ for(const producto of Productos){
         }else{
             alert("Chale");
         }
-    }else{
-    alert("No eres mayor de edad. Bye");
-    
     }
+    
+    
+    
+}else{
+        alert("No eres mayor de edad. Bye");
+    
+}
 
 
 

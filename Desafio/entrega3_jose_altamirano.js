@@ -24,6 +24,7 @@ if (user == "usuario"){
 renderizarProductos()    
 }else{
     alert("Error: Ingresar usuario");
+    window.location.href='http://www.google.com';
 }
 
 

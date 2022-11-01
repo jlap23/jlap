@@ -1,4 +1,4 @@
 me baso mucho en las clases debido a mi falta de html, 
 quiero hacer un dispensario en línea, solo para usuarios registrados
 
-usar: "420@420.com" como usuario para entrar
+usar: "usuario" como usuario para entrar

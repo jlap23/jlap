@@ -1,5 +1,3 @@
-//After clase 9
-//console.log(productos);
 let carrito = [];
 let contenedor = document.getElementById("misprods");
 let btnFin =document.getElementById("finalizar");
@@ -11,6 +9,23 @@ console.log(inicio.toString());
 console.log(inicio.zoneName);
 console.log(inicio.daysInMonth);
 console.log(inicio.toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS));
+
+//redirijir
+function Redirigir(){
+    window.location.href =("https://google.com/")
+}
+
+//ingreso por usuario
+
+let user = prompt("cual es tu usuario?");
+console.log ("escribe la palabra usuario");
+
+if (user == "usuario"){
+renderizarProductos()    
+}else{
+    alert("Error: Ingresar usuario");
+}
+
 
 function renderizarProductos(){
     for(const producto of productos){
@@ -36,7 +51,7 @@ function renderizarProductos(){
     });
 }
 
-renderizarProductos();
+//renderizarProductos();
 
 function agregarAlCarrito(productoAComprar){
     carrito.push(productoAComprar);

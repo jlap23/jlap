@@ -1,3 +1,4 @@
-basicamente es un programa para subir productos a partir de lo que pone el usuario y al final lo monta en bootstrap. algo funcional y que juegue a la segura. 
+me baso mucho en las clases debido a mi falta de html, 
+quiero hacer un dispensario en línea, solo para usuarios registrados
 
-me interesó mucho lo de bootstrap creo que hay mucho que investigar, muchas gracias por su apoyo, ahi vamos poco a poco. 
+usar: "420@420.com" como usuario para entrar
